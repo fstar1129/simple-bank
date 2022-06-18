@@ -1,0 +1,10 @@
+Deploy contract:
+    npx hardhat run --network ropsten scripts/Deploy.js
+
+Verify:
+    GLD Token:
+        npx hardhat verify --contract contracts/BabnyToken.sol:GLDToken --network ropsten 0x23E55D5dB28500b42437F120028C8354DF43d5A5 "100000000000000000000000000000"
+        // 0x23E55D5dB28500b42437F120028C8354DF43d5A5
+    Bank contract
+        npx hardhat verify --constructor-args arguments.js --contract contracts/Bank.sol:Bank --network ropsten 0xe51A91cfcC48201e0dCd6780451AF9285881FF29
+        // 0xe51A91cfcC48201e0dCd6780451AF9285881FF29
